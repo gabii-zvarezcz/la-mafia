@@ -1,0 +1,226 @@
+* {
+    margin: 0;                        /*Espaço externo ao redor do elemento é zerado.*/
+    padding: 0;                       /*Espaço interno entre o conteúdo e a borda é zerado.*/
+    box-sizing: border-box;           /*faz com que a largura e altura de um elemento incluam o preenchimento e a borda, simplificando o dimensionamento e layout.*/
+    font-family: 'kanit', sans-serif; /*muda a fonte*/
+}
+
+body {
+    background-color: #f4f4f4; /*cor do fundo*/
+}
+
+.cabecalho {
+    background-color: black;
+    padding: 20px;
+    text-align: center;         /*alinha o texto*/
+    position: relative;         /*posiciona o elemento seguindo o fluxo do documento*/
+}
+
+.container-header {
+    max-width: 1200px;          /*largura maxima*/ 
+    margin: 0 auto;
+    position: relative;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  .header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  .header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    width: 250px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .header-right {
+    width: 250px; /* mesma largura da logo para centralização balanceada */
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+  }
+  
+  .search-box input[type="text"] {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 200px;
+    transition: 0.3s;
+  }
+  
+  .search-box input[type="text"]:focus {
+    outline: none;
+    border-color: #000;
+  }
+  
+  .search-box button {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-box button:hover {
+    background-color: #c00;
+  }
+  
+  .search-box button {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .header-right {
+    width: 150px; /* ocupa o mesmo espaço da logo para balancear visualmente */
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .search-box input[type="text"] {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-box button {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .header-right {
+    width: 150px; /* ocupa o mesmo espaço da logo para balancear visualmente */
+  }
+  
+
+.nav-links {
+    display: flex;              /*container flexível, habilitando um modelo de layout unidimensional*/
+    flex-wrap: wrap;            /* instrui os itens dentro de um container flexível a quebrarem para a próxima linha*/
+    justify-content: center;    /*alinha os itens flexíveis ao longo do eixo principal do container flexível, centralizando-os dentro do espaço disponível*/
+    gap: 15px;                  /*define o espaçamento (a distância) entre os itens em layouts de grade*/
+    margin-top: 20px;           /*margem do topo*/
+    align-items: center;
+    
+}
+
+.nav-links ul {
+    list-style: none; /* Opcional: remove os marcadores de lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Transforma a ul em um container flexível */
+    justify-content: center; /* Centraliza os itens da lista horizontalmente */
+    gap: 15px; /*Opcional: adiciona espaço entre os itens da lista */
+}
+
+.nav-links a {
+    text-decoration: none;      /*aparência de linhas de decoração no texto de um elemento*/
+    color: rgb(255, 255, 255); 
+    font-size: 16px;            /* tamanho da font*/
+    font-weight: 600;           /*espessura ou o peso da fonte*/
+    transition: all 0.3s ease;  /*define uma transição suave*/
+    margin-top: 0;
+    align-items: center;
+}
+
+.button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.destaque {
+    border: 2px solid black;
+    background-color: transparent;
+}
+
+.destaque:hover {
+    background-color: black;
+    color: white;
+}
+
+.destaque2 {
+    background-color: black;
+    color: white;
+}
+
+.destaque2:hover {
+    background-color: #c00;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #000;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      z-index: 10;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  
+    .nav-links a {
+      margin: 10px 0;
+    }
+  }
+  
